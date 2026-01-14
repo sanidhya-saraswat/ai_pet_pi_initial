@@ -6,9 +6,13 @@
     ```
 
 ## Shutdown pi
+```
 sudo shutdown -h now
+```
 ## Reboot pi
+```
 sudo reboot
+```
 
 # Docker
 Kill all containers
