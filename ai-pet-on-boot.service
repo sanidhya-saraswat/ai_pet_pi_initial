@@ -1,0 +1,16 @@
+[Unit]
+Description=AI Pet On Boot script
+After=network-online.target docker.service
+Wants=network-online.target docker.service
+
+[Service]
+Type=oneshot
+User=sanidhya
+WorkingDirectory=/home/sanidhya/repos/ai_pet_pi_initial
+ExecStart=/bin/bash /home/sanidhya/repos/ai_pet_pi_initial/on_boot.bash
+RemainAfterExit=no
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
