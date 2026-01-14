@@ -58,7 +58,7 @@ sudo -u "$REAL_USER" git clone https://${GITHUB_TOKEN}@github.com/sanidhya-saras
 # Setup on_boot service
 echo "📁 Setting up on_boot service..."
 SERVICE_NAME="ai-pet-on-boot.service"
-SRC_FILE="./${SERVICE_NAME}"
+SRC_FILE="${INITIAL_SETUP_REPO_DIR}/${SERVICE_NAME}"
 DEST_FILE="/etc/systemd/system/${SERVICE_NAME}"
 cp "$SRC_FILE" "$DEST_FILE"
 systemctl daemon-reload
